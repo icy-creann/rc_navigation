@@ -1,0 +1,10 @@
+<launch>
+    <!-- 三个输入话题参数 -->
+    <param name="aimed_target_topic" value="/aimed_target_topic"/>
+    <param name="current_position_topic" value="/current_position_topic"/>
+    <param name="match_info_topic" value="/match_info_topic"/>
+    <!-- 一个输出话题参数 -->
+    <param name="goal_position_topic" value="/goal_position_topic" />
+
+    <node pkg="decision_pkg" name="decision_node" type="decision_node" output="screen" />
+</launch> 

@@ -1,0 +1,19 @@
+<launch>
+    <!-- 启动 wpb_navigation -->
+    <include file="$(find wpr_simulation)/launch/wpb_navigation.launch" />
+
+    <!-- 三个输入话题参数 -->
+    <param name="aimed_target_topic" value="/aimed_target_topic"/>
+    <param name="current_position_topic" value="/current_position_topic"/>
+    <param name="match_info_topic" value="/match_info_topic"/>
+    <!-- 一个输出话题参数 -->
+    <param name="goal_position_topic" value="/goal_position_topic" />
+
+    <!-- 启动 decision_node -->
+    <node pkg="decision_pkg" name="decision_node" type="decision_node" output="screen" />
+
+    <!-- 启动 topic_relayer，延迟 3 秒 -->
+    <node name="topic_relayer" pkg="decision_pkg" type="topic_relayer.py" output="screen" >
+        <param name="ros__parameters" value="{'delay': 3.0}" />
+    </node>
+</launch>

@@ -1,0 +1,9 @@
+float64 x
+float64 y
+float64 z
+float64 t
+float64 alpha
+float64 k
+int32 type
+int32 id
+time timeStamp

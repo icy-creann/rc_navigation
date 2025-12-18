@@ -1,0 +1,14 @@
+<launch>    
+    <!-- 导航与建图 -->
+    <include file="$(find livox_ros_driver2)/launch_ROS1/msg_MID360.launch"/>
+    <include file="$(find fast_lio_localization)/launch/localization.launch"/>
+    <include file="$(find navigation_pkg)/launch/navigation.launch"/>
+
+    <!-- 决策中继 -->
+    <include file="$(find middle_pkg)/launch/middle_without_decision.launch"/>
+    <!-- <include file="$(find decision_pkg)/launch/decision_node.launch"/> -->
+    
+    <!-- 通信 -->
+    <include file="$(find middle_coding_pkg)/launch/middle_coding_launch.launch"/>
+    <include file="$(find usb_can_pkg)/launch/usb_can_node.launch" />
+</launch>

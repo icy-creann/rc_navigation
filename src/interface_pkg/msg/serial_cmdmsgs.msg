@@ -1,0 +1,9 @@
+float64 vx
+float64 vy
+float64 vw
+float64 pitch_down
+float64 pitch_up
+float64 yaw_up
+float64 yaw_down
+int32 shoot_up
+int32 shoot_down

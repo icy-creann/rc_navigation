@@ -1,0 +1,7 @@
+<launch>
+    <!-- 雷达驱动 -->
+    <include file="$(find livox_ros_driver2)/launch_ROS1/msg_MID360.launch"/>
+    <!-- 建图定位 -->
+    <include file="$(find fast_lio)/launch/Pointcloud2Map.launch"/>
+    <include file="$(find fast_lio_localization)/launch/localization.launch"/>
+</launch>
