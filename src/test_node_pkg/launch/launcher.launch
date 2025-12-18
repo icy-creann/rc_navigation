@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="test_node_pkg" name="test_node" type="test_node" output="screen">
+      	<param name="cmd_sub_topic" value="cmd_topic"/>
+    	<param name="vel_sub_topic" value="vel_topic"/>
+    </node>
+    <include file="$(find can_serial_pkg)/launch/canSerial.launch"/>
+</launch>

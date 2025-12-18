@@ -1,0 +1,10 @@
+<launch>
+    <param name="serial_port" value="/dev/ttyUSBcan"  type = "string" />
+    <param name="baud_rate" value="2000000" type = "string" />
+    <param name="can_downward_topic" value="/can_downward_topic"  type = "string" />
+    <param name="can_upward_topic" value="/can_upward_topic" type = "string" />
+    <node name="serial_can_node" pkg="usb_can_pkg" type="serial_can_node" output="screen">
+    
+    <node name="serial_can_recv_node" pkg="usb_can_pkg" type="serial_can_recv_node" output="screen">
+    </node>
+</launch>

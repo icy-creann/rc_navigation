@@ -1,0 +1,11 @@
+<launch> 
+  <include file="$(find decision_pkg)/launch/decision_node.launch"/>
+            
+  <node pkg="test_node_pkg" name="decision_test_node" 
+              type="decision_test_node" output="screen" />
+  
+  <!--node pkg="rviz" type="rviz" name="rviz"
+        args="-d $(find test_node_pkg)/launch/show.rviz"/-->
+
+  <!-- node pkg="map_server" type="map_server" name="map_server" args="$(find test_node_pkg)/map/rmMatchMap.yaml"/-->
+</launch> 
