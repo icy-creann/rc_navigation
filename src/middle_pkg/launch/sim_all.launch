@@ -1,0 +1,6 @@
+<launch>
+    <!-- Node with original topic -->
+    <node pkg="middle_pkg" type="middle_node" name="middle_node" />
+    <node pkg="middle_pkg" type="can_node" name="can_node"  />
+    <node pkg="middle_pkg" type="can_sub_node" name="can_sub_node"/>
+</launch>

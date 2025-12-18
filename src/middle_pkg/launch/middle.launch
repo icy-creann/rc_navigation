@@ -1,0 +1,4 @@
+<launch>
+    <!-- Node with original topic -->
+    <node pkg="middle_pkg" type="middle_node" name="middle_node" output="screen"/>
+</launch>

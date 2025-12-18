@@ -1,0 +1,13 @@
+<launch>
+    <param name="can_downward_topic" value="/can_downward_topic"  type = "string" />
+    <param name="can_upward_topic" value="/can_upward_topic" type = "string" />
+    <param name="mach_info_topic" value="/match_info_topic" type = "string" />
+    
+    <param name="chassis_control_topic" value="/cmd_vel" type = "string" />
+    <param name="gimbal_control_topic" value="/dangle_shoot" type = "string" />
+    <param name="downward_pub_rate" value="100" type = "string" />
+    
+
+    <!-- 启动 middle_coding_node -->
+    <node pkg="middle_coding_pkg" type="middle_coding_node" name="middle_coding_node" output="screen" />
+</launch>

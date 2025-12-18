@@ -1,0 +1,5 @@
+<launch>
+    <!-- Node with original topic -->
+    <node pkg="middle_pkg" type="middle_without_decision" name="middle_without_decision" output="screen"/>
+    <node pkg="middle_pkg" type="can_node" name="can_node" output="screen"/>
+</launch>
